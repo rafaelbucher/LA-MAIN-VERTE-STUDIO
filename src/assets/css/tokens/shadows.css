@@ -1,0 +1,299 @@
+/* ===== DESIGN TOKENS - SHADOWS ===== */
+
+:root {
+  /* ===== MODE RGAA - SHADOWS DOUX ===== */
+  /* Ombrages progressifs avec blur et transparence */
+  
+  --shadow-xs-rgaa: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm-rgaa: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md-rgaa: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-lg-rgaa: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-xl-rgaa: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+
+  /* Shadows spéciaux RGAA */
+  --shadow-inner-rgaa: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-focus-rgaa: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  --shadow-colored-rgaa: 0 4px 14px rgba(0, 200, 83, 0.15);
+
+  /* ===== MODE RGESN - BORDERS TRANCHÉES ===== */
+  /* Bordures noires solides sans blur */
+  
+  --shadow-xs-rgesn: 1px 1px 0 #000000;
+  --shadow-sm-rgesn: 2px 2px 0 #000000;
+  --shadow-md-rgesn: 3px 3px 0 #000000;
+  --shadow-lg-rgesn: 4px 4px 0 #000000;
+  --shadow-xl-rgesn: 6px 6px 0 #000000;
+
+  /* Variations directionnelles RGESN */
+  --shadow-top-rgesn: 0 -2px 0 #000000;
+  --shadow-bottom-rgesn: 0 2px 0 #000000;
+  --shadow-left-rgesn: -2px 0 0 #000000;
+  --shadow-right-rgesn: 2px 0 0 #000000;
+
+  /* Shadows spéciaux RGESN */
+  --shadow-inner-rgesn: inset 2px 2px 0 #000000;
+  --shadow-focus-rgesn: 0 0 0 2px #000000;
+  --shadow-colored-rgesn: 3px 3px 0 #1A1A1A;
+
+  /* ===== VARIABLES SÉMANTIQUES (s'adaptent selon le mode) ===== */
+  
+  /* Shadows par défaut (mode RGAA) */
+  --shadow-xs: var(--shadow-xs-rgaa);
+  --shadow-sm: var(--shadow-sm-rgaa);
+  --shadow-md: var(--shadow-md-rgaa);
+  --shadow-lg: var(--shadow-lg-rgaa);
+  --shadow-xl: var(--shadow-xl-rgaa);
+  
+  /* Shadows contextuels */
+  --shadow-card: var(--shadow-sm-rgaa);
+  --shadow-card-hover: var(--shadow-md-rgaa);
+  --shadow-button: var(--shadow-xs-rgaa);
+  --shadow-button-hover: var(--shadow-sm-rgaa);
+  --shadow-modal: var(--shadow-xl-rgaa);
+  --shadow-dropdown: var(--shadow-lg-rgaa);
+  --shadow-tooltip: var(--shadow-md-rgaa);
+  --shadow-navbar: var(--shadow-sm-rgaa);
+  
+  /* Shadows d'état */
+  --shadow-focus: var(--shadow-focus-rgaa);
+  --shadow-error: 0 0 0 2px rgba(239, 68, 68, 0.2);
+  --shadow-success: 0 0 0 2px rgba(16, 185, 129, 0.2);
+  --shadow-warning: 0 0 0 2px rgba(245, 158, 11, 0.2);
+  
+  /* Shadows d'élévation */
+  --elevation-0: none;
+  --elevation-1: var(--shadow-xs);
+  --elevation-2: var(--shadow-sm);
+  --elevation-3: var(--shadow-md);
+  --elevation-4: var(--shadow-lg);
+  --elevation-5: var(--shadow-xl);
+}
+
+/* ===== MODE RGESN - SWITCH DES SHADOWS ===== */
+.mode-rgesn {
+  /* Switch vers les bordures tranchées */
+  --shadow-xs: var(--shadow-xs-rgesn);
+  --shadow-sm: var(--shadow-sm-rgesn);
+  --shadow-md: var(--shadow-md-rgesn);
+  --shadow-lg: var(--shadow-lg-rgesn);
+  --shadow-xl: var(--shadow-xl-rgesn);
+  
+  /* Shadows contextuels RGESN */
+  --shadow-card: var(--shadow-sm-rgesn);
+  --shadow-card-hover: var(--shadow-md-rgesn);
+  --shadow-button: var(--shadow-xs-rgesn);
+  --shadow-button-hover: var(--shadow-sm-rgesn);
+  --shadow-modal: var(--shadow-lg-rgesn);
+  --shadow-dropdown: var(--shadow-md-rgesn);
+  --shadow-tooltip: var(--shadow-sm-rgesn);
+  --shadow-navbar: var(--shadow-bottom-rgesn);
+  
+  /* Shadows d'état RGESN */
+  --shadow-focus: var(--shadow-focus-rgesn);
+  --shadow-error: 2px 2px 0 #EF4444;
+  --shadow-success: 2px 2px 0 #10B981;
+  --shadow-warning: 2px 2px 0 #F59E0B;
+  
+  /* Élévations RGESN */
+  --elevation-0: none;
+  --elevation-1: var(--shadow-xs-rgesn);
+  --elevation-2: var(--shadow-sm-rgesn);
+  --elevation-3: var(--shadow-md-rgesn);
+  --elevation-4: var(--shadow-lg-rgesn);
+  --elevation-5: var(--shadow-xl-rgesn);
+}
+
+/* ===== CLASSES UTILITAIRES - SHADOWS ===== */
+
+/* Shadows de base */
+.shadow-none { box-shadow: none; }
+.shadow-xs { box-shadow: var(--shadow-xs); }
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+
+/* Élévations */
+.elevation-0 { box-shadow: var(--elevation-0); }
+.elevation-1 { box-shadow: var(--elevation-1); }
+.elevation-2 { box-shadow: var(--elevation-2); }
+.elevation-3 { box-shadow: var(--elevation-3); }
+.elevation-4 { box-shadow: var(--elevation-4); }
+.elevation-5 { box-shadow: var(--elevation-5); }
+
+/* Shadows contextuels */
+.shadow-card { box-shadow: var(--shadow-card); }
+.shadow-button { box-shadow: var(--shadow-button); }
+.shadow-modal { box-shadow: var(--shadow-modal); }
+.shadow-dropdown { box-shadow: var(--shadow-dropdown); }
+.shadow-tooltip { box-shadow: var(--shadow-tooltip); }
+.shadow-navbar { box-shadow: var(--shadow-navbar); }
+
+/* Shadows d'état */
+.shadow-focus { box-shadow: var(--shadow-focus); }
+.shadow-error { box-shadow: var(--shadow-error); }
+.shadow-success { box-shadow: var(--shadow-success); }
+.shadow-warning { box-shadow: var(--shadow-warning); }
+
+/* Shadows RGESN spécifiques (utilisables dans les deux modes) */
+.shadow-top { box-shadow: var(--shadow-top-rgesn); }
+.shadow-bottom { box-shadow: var(--shadow-bottom-rgesn); }
+.shadow-left { box-shadow: var(--shadow-left-rgesn); }
+.shadow-right { box-shadow: var(--shadow-right-rgesn); }
+
+/* ===== CLASSES DE COMPOSITION ===== */
+
+/* Cartes avec shadows adaptatifs */
+.card-shadow {
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.2s ease;
+}
+
+.card-shadow:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Boutons avec shadows adaptatifs */
+.button-shadow {
+  box-shadow: var(--shadow-button);
+  transition: box-shadow 0.2s ease;
+}
+
+.button-shadow:hover {
+  box-shadow: var(--shadow-button-hover);
+}
+
+.button-shadow:focus {
+  box-shadow: var(--shadow-focus);
+}
+
+.button-shadow:active {
+  box-shadow: var(--shadow-xs);
+  transform: translateY(1px);
+}
+
+/* Navigation avec shadow adaptative */
+.navbar-shadow {
+  box-shadow: var(--shadow-navbar);
+}
+
+/* Modales et overlays */
+.modal-shadow {
+  box-shadow: var(--shadow-modal);
+}
+
+.dropdown-shadow {
+  box-shadow: var(--shadow-dropdown);
+}
+
+.tooltip-shadow {
+  box-shadow: var(--shadow-tooltip);
+}
+
+/* ===== ANIMATIONS ET TRANSITIONS ===== */
+
+/* Élévation progressive au hover */
+.elevate-on-hover {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.elevate-on-hover:hover {
+  box-shadow: var(--elevation-4);
+  transform: translateY(-2px);
+}
+
+.mode-rgesn .elevate-on-hover:hover {
+  transform: translateY(-1px) translateX(-1px);
+}
+
+/* Animation de focus */
+.focus-shadow {
+  transition: box-shadow 0.2s ease;
+}
+
+.focus-shadow:focus {
+  box-shadow: var(--shadow-focus);
+  outline: none;
+}
+
+/* Effet de pression (click) */
+.press-effect {
+  transition: box-shadow 0.1s ease, transform 0.1s ease;
+}
+
+.press-effect:active {
+  box-shadow: var(--shadow-xs);
+  transform: translateY(1px);
+}
+
+.mode-rgesn .press-effect:active {
+  transform: translateY(1px) translateX(1px);
+}
+
+/* ===== UTILITAIRES SPÉCIAUX ===== */
+
+/* Suppression des shadows en mode RGESN pour certains éléments */
+.mode-rgesn .no-shadow-rgesn {
+  box-shadow: none !important;
+}
+
+/* Bordure simple en mode RGESN */
+.mode-rgesn .border-rgesn {
+  border: 1px solid #000000;
+  box-shadow: none;
+}
+
+/* Shadow intérieure adaptative */
+.shadow-inner {
+  box-shadow: var(--shadow-inner-rgaa);
+}
+
+.mode-rgesn .shadow-inner {
+  box-shadow: var(--shadow-inner-rgesn);
+}
+
+/* ===== RESPONSIVE SHADOWS ===== */
+
+@media (max-width: 768px) {
+  /* Réduction des shadows sur mobile pour les performances */
+  .shadow-lg {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .shadow-xl {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .elevation-4 {
+    box-shadow: var(--elevation-3);
+  }
+  
+  .elevation-5 {
+    box-shadow: var(--elevation-4);
+  }
+  
+  /* Pas de changement pour le mode RGESN sur mobile */
+  .mode-rgesn .shadow-lg {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .mode-rgesn .shadow-xl {
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+
+@media print {
+  /* Suppression de toutes les shadows pour l'impression */
+  * {
+    box-shadow: none !important;
+  }
+  
+  /* Bordures légères pour maintenir la structure */
+  .card-shadow,
+  .button-shadow,
+  .modal-shadow {
+    border: 1px solid #E5E7EB;
+  }
+}

@@ -1,0 +1,270 @@
+# ===================================
+# FICHIERS SYSTÈME
+# ===================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ===================================
+# ÉDITEURS & IDEs
+# ===================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# ===================================
+# REACT + VITE
+# ===================================
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Vite build output
+dist/
+dist-ssr/
+
+# Vite cache
+.vite/
+
+# Local environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# React Hot Reload
+.eslintcache
+
+# Storybook build outputs
+storybook-static/
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# React DevTools Profiler
+react-devtools-profiler/
+
+# ===================================
+# TESTING
+# ===================================
+
+# Jest
+coverage/
+*.lcov
+.nyc_output/
+
+# Vitest (often used with Vite)
+coverage/
+.vitest/
+
+# Playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# ===================================
+# DÉVELOPPEMENT
+# ===================================
+
+# Hot reload
+*.hot-update.js
+*.hot-update.json
+
+# Source maps (optionnel, selon vos préférences)
+# *.map
+
+# Bundle analyzer
+bundle-analyzer-report.html
+
+# TypeScript (si utilisé)
+*.tsbuildinfo
+
+# ===================================
+# DATABASES
+# ===================================
+
+# SQLite
+*.sqlite
+*.sqlite3
+*.db
+
+# MongoDB
+*.mdb
+
+# MySQL
+*.sql
+
+# ===================================
+# LOGS & TEMPORAIRES
+# ===================================
+
+# Log files
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Temporary folders
+tmp/
+temp/
+
+# ===================================
+# SÉCURITÉ & CONFIGURATION
+# ===================================
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.envrc
+
+# Configuration files
+config.json
+config.yml
+config.yaml
+secrets.json
+
+# Keys & certificates
+*.key
+*.pem
+*.crt
+*.csr
+*.p12
+*.pfx
+
+# ===================================
+# MÉDIAS & ASSETS
+# ===================================
+
+# Large media files (optionnel)
+# *.mp4
+# *.avi
+# *.mov
+# *.mp3
+# *.wav
+# *.png
+# *.jpg
+# *.jpeg
+# *.gif
+
+# ===================================
+# CLOUD & DÉPLOIEMENT
+# ===================================
+
+# Docker
+.dockerignore
+
+# AWS
+.aws/
+
+# Package files (gardez selon votre gestionnaire de paquets)
+# package-lock.json  # Décommentez si vous utilisez npm
+# yarn.lock          # Décommentez si vous utilisez yarn
+# pnpm-lock.yaml     # Décommentez si vous utilisez pnpm
+
+# ===================================
+# AUTRES
+# ===================================
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Documentation build
+docs/_build/
+
+# Cache directories
+.cache/
+.parcel-cache/
